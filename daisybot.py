@@ -70,7 +70,7 @@ def start(update: Update, context: CallbackContext) -> None:
         f"💡 Use /help to see available commands\n\n"
         f"Let's make this chat a beautiful garden together\! 🌻"
     )
-   update.message.reply_text(welcome_message)
+    update.message.reply_text(welcome_message)
     main_menu(update, context)
 
 def main_menu(update: Update, context: CallbackContext) -> None:
