@@ -1,22 +1,35 @@
+import os
 import logging
 import random
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ChatPermissions
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageHandler, Filters, CallbackContext
-import telegram
 from datetime import datetime, timedelta
 
-# Enable logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+from telegram import (
+    Update,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    ChatPermissions,
+)
+from telegram.ext import (
+    Updater,
+    CommandHandler,
+    CallbackQueryHandler,
+    MessageHandler,
+    Filters,
+    CallbackContext,
+)
+import telegram
+
+OWNER_ID = int(os.environ["OWNER_ID"])
+TOKEN = os.environ["BOT_TOKEN"]
+OWNER_USERNAME = "@Deva_SenapathyOfficial"
+
+logging.basicConfig(
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    level=logging.INFO,
+)
 logger = logging.getLogger(__name__)
 
-# BOT TOKEN (genrate from bot father)
-TOKEN = 'bot_token'
-
 user_data = {}
-
-# Bot owner details
-OWNER_ID = YOUR_USERID
-OWNER_USERNAME = "@realcodedbyom"
 
 def is_owner(user_id: int) -> bool:
     """Check if the user is the bot owner."""
