@@ -63,14 +63,14 @@ def start(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
     welcome_message = (
-        f"🌼 Welcome to DaisyBot, {user.mention_markdown_v2()}\! 🌼\n\n"
+        f"🌼 Welcome to group manager, {user.mention_markdown_v2()}\! 🌼\n\n"
         f"I'm here to help manage your chat and make it bloom with fun and order\. 🌺\n\n"
         f"🔧 Managed by: {OWNER_USERNAME}\n"
         f"🚀 Version: 1\.0\n"
         f"💡 Use /help to see available commands\n\n"
         f"Let's make this chat a beautiful garden together\! 🌻"
     )
-    update.message.reply_markdown_v2(welcome_message)
+   update.message.reply_text(welcome_message)
     main_menu(update, context)
 
 def main_menu(update: Update, context: CallbackContext) -> None:
