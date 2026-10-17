@@ -1076,7 +1076,15 @@ def main() -> None:
 
     # Start the Bot
     updater.start_polling()
-
+    
+    updater = Updater(
+    token=TOKEN,
+    use_context=True,
+    request_kwargs={
+        "read_timeout": 30,
+        "connect_timeout": 30,
+    },
+)
 
     updater.idle()
 
