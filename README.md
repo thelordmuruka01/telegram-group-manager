@@ -2,6 +2,9 @@
 
 A comprehensive and user-friendly Telegram bot designed to help manage your chat groups with ease. DaisyBot provides a beautiful interface with inline keyboards and powerful moderation tools to keep your community blooming! 🌻
 
+
+[![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://render.com/deploy?repo=https://github.com/thelordmuruka01/telegram-group-manager)
+
 ## ✨ Features
 
 ### 🛡️ Moderation Tools
